@@ -2,7 +2,7 @@
   <div id="app">
     <syHeader />
     <syMenu/>
-    <sybutton />
+    <router-view></router-view>
   </div>
 </template>
 

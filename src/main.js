@@ -4,16 +4,16 @@
  */
 
 import Vue from 'vue'
-import Router from "./router/index.js"
+import router from "./router/index.js"
 import App from './App.vue'
 
 
-import syui from "../packages"
-Vue.use(syui)
+import syUI from "../packages"
+Vue.use(syUI)
 
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   render: h => h(App),
-  Router
 }).$mount('#app')
