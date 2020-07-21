@@ -12,7 +12,7 @@ import syUI from "../packages"
 Vue.use(syUI)
 
 Vue.config.productionTip = false
-
+console.log(router,77)
 new Vue({
   router,
   render: h => h(App),

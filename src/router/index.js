@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import router from 'vue-router'
+import Router from 'vue-router'
 
-Vue.use(router)
+Vue.use(Router)
 import route from "./routes/routes"
 let routes = [];
 
@@ -15,7 +15,6 @@ const addComponent = (router) => {
         routes = routes.concat(route.items)
       } else {
         if (route.type == 'page') {
-            console.log(require(`../pages/${route.name}.vue`))
           route.component = () => 
           import(`../pages/${route.name}.vue`)
           return
@@ -30,6 +29,6 @@ const routerMap = {
     mode:'hash',
     routes
 }
-export default new router({
+export default new Router({
     ...routerMap
 })
