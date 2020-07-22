@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <syHeader />
-    <syMenu/>
     <router-view></router-view>
   </div>
 </template>
@@ -11,7 +9,7 @@ export default {
   name: 'app',
   data() {
     return{}
-  }
+  },
 }
 </script>
 

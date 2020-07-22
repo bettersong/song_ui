@@ -1,15 +1,28 @@
 <template>
   <div class="sy-header">
-      <!-- <div class="menu"></div> -->
-      ttt
+      <div class="menu">
+        <div class="header-left" v-if="headLeft" @click="headLeftFun">{{headLeft}}</div>
+        <div class="header-left" v-if="headRight" @click="headRightFun">{{headRight}}</div>
+      </div>
+      
   </div>
 </template>
 
 <script>
 export default {
     name: "syHeader",
+    props: {
+        headLeft:null,
+        headRight:null,
+        headLeftURL:null
+    },
     data() {
         return {}
+    },
+    methods:{
+        headLeftFun() {
+            this.$router.push(this.headLeftURL)
+        }
     }
 }
 </script>
@@ -22,9 +35,18 @@ export default {
     background:#fff;
     box-shadow: 2px 5px 20px #eee;
     .menu{
-        width:100px;
-        height:60px;
-        background:cornsilk;
+        width:80%;
+        height:100%;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 80px;
+    }
+    .header-left{
+        cursor: pointer;
+       font-size: 32px;
+       color: #26a2ff;
     }
 }
 </style>

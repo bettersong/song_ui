@@ -10,7 +10,7 @@ import App from './App.vue'
 
 import syUI from "../packages"
 Vue.use(syUI)
-
+console.log(router)
 Vue.config.productionTip = false
 console.log(router,77)
 new Vue({
