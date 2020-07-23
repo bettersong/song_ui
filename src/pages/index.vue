@@ -4,10 +4,10 @@
     <div class="index-body">
         <div class="menus">
         <syMenu/>
-    </div>
-    <div class="content">
-        <router-view></router-view>
-    </div>
+        </div>
+        <div class="content">
+            <router-view></router-view>
+        </div>
     </div>
   </div>
 </template>
@@ -29,5 +29,19 @@ export default {
 </script>
 
 <style lang="less">
-
+    .index{
+        .index-body{
+            display:flex;
+            margin:0 auto;
+            width: 90%;
+            .menus{
+                background: orange;
+            }
+            .content{
+                width:800px;
+                height:300px;
+                background: palegoldenrod;
+            }
+        }
+    }
 </style>
